@@ -1,6 +1,5 @@
-const WHATSAPP_API_URL =
-  "https://graph.facebook.com/v17.0/YOUR_PHONE_NUMBER_ID/messages";
-const WHATSAPP_TOKEN = "YOUR_ACCESS_TOKEN";
+const WHATSAPP_API_URL = import.meta.env.VITE_WHATSAPP_API_URL;
+const WHATSAPP_TOKEN = import.meta.env.VITE_WHATSAPP_TOKEN;
 
 export const sendWhatsAppMessage = async (phone: string, message: string) => {
   try {
