@@ -23,10 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
-!node_modules/.vite
-
+# Tempo files
 **/tempobook/dynamic/
 **/tempobook/storyboards/
+
+!node_modules/.vite
 
 # Environment variables
 .env

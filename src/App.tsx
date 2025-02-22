@@ -10,14 +10,15 @@ function App() {
   return (
     <CartProvider>
       <Suspense fallback={<p>Loading...</p>}>
-        <>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/order-success" element={<OrderSuccess />} />
-          </Routes>
-          {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
-        </>
+        {/* Tempo routes */}
+        {import.meta.env.VITE_TEMPO && useRoutes(routes)}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
+          {/* Add this before the catchall route */}
+          {import.meta.env.VITE_TEMPO && <Route path="/tempobook/*" />}
+        </Routes>
       </Suspense>
     </CartProvider>
   );
