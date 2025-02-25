@@ -5,7 +5,7 @@ import { Input } from "./ui/input";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Label } from "./ui/label";
 import { useNavigate } from "react-router-dom";
-import { sendWhatsAppMessage, formatOrderMessage } from "@/lib/whatsapp";
+import { sendWhatsAppMessage, formatOrderMessage } from "@/lib/twilio";
 
 interface CheckoutFormData {
   name: string;
